@@ -13,7 +13,7 @@ configurations {
     provided
 }
 
-version = "0.1.0"
+version = "0.0.1"
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -83,7 +83,7 @@ Gem::Specification.new do |spec|
   spec.description   = %[Formats Turtle files for other file output plugins.]
   spec.email         = ["takeshi.mikami@gmail.com"]
   spec.licenses      = ["MIT"]
-  # TODO set this: spec.homepage      = "https://github.com/takeshi.mikami/embulk-formatter-turtle"
+  spec.homepage      = "https://github.com/takeshi.mikami/embulk-formatter-turtle"
 
   spec.files         = `git ls-files`.split("\n") + Dir["classpath/*.jar"]
   spec.test_files    = spec.files.grep(%r"^(test|spec)/")
