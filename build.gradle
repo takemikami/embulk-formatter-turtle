@@ -21,6 +21,7 @@ targetCompatibility = 1.8
 dependencies {
     compile  "org.embulk:embulk-core:0.9.23"
     provided "org.embulk:embulk-core:0.9.23"
+    compile 'org.apache.jena:jena-tdb2:3.9.0'
     // compile "YOUR_JAR_DEPENDENCY_GROUP:YOUR_JAR_DEPENDENCY_MODULE:YOUR_JAR_DEPENDENCY_VERSION"
     testCompile "junit:junit:4.+"
 }

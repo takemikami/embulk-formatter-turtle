@@ -1,6 +1,6 @@
 # Turtle formatter plugin for Embulk
 
-TODO: Write short description here and build.gradle file.
+Turtle formatter plugin for Embulk, output RDF with tutle format.
 
 ## Overview
 
@@ -8,9 +8,9 @@ TODO: Write short description here and build.gradle file.
 
 ## Configuration
 
-- **option1**: description (integer, required)
-- **option2**: description (string, default: `"myvalue"`)
-- **option3**: description (string, default: `null`)
+- **base**: base uri (string, required)
+- **subject_column**: subject column name (string, required)
+- **columns**: columns, name and predicate (map-list, required)
 
 ## Example
 
@@ -19,10 +19,14 @@ out:
   type: any output input plugin type
   formatter:
     type: turtle
-    option1: example1
-    option2: example2
+    base: http://example.com/ttl/
+    subject_column: 'id'
+    columns:
+      - {name: 'account', predicate: 'http://example.com/ttl/type#account'}
+      - {name: 'time', predicate: 'http://example.com/ttl/type#time'}
+      - {name: 'purchase', predicate: 'http://example.com/ttl/type#purchase'}
+      - {name: 'comment', predicate: 'http://example.com/ttl/type#comment'}
 ```
-
 
 ## Build
 
